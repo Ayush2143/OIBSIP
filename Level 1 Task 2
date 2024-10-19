@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,32 +8,189 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <style>
-        body { margin: 0; font-family: 'Roboto', sans-serif; background-color: #0f171e; color: #fff; }
-        header { background: #0f171e; padding: 20px; text-align: center; border-bottom: 2px solid #232f3e; }
-        nav { display: flex; justify-content: center; background: #232f3e; padding: 10px 0; }
-        nav a { color: #fff; margin: 0 15px; text-decoration: none; padding: 8px 16px; transition: background 0.3s, border-radius 0.3s; }
-        nav a:hover { background: #3a4553; border-radius: 4px; }
-        .hero { position: relative; height: 500px; overflow: hidden; }
-        #heroVideo { width: 100%; height: auto; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); z-index: -1; }
-        .hero-text { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); text-align: center; color: #fff; background: rgba(0, 0, 0, 0.5); padding: 20px; border-radius: 10px; animation: fadeIn 2s; }
-        @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
-        .content { padding: 20px; max-width: 1200px; margin: 20px auto; text-align: center; }
-        .content h2 { color: #fff; }
-        .features { display: flex; flex-wrap: wrap; justify-content: space-around; padding: 40px 20px; background: #0f171e; }
-        .feature { width: 30%; margin: 10px; padding: 20px; background: #232f3e; border-radius: 10px; text-align: center; transition: transform 0.3s, box-shadow 0.3s; }
-        .feature:hover { transform: scale(1.05); box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3); }
-        .feature i { font-size: 2em; margin-bottom: 10px; }
-        .cta-button { background-color: #ff7e5f; color: #fff; padding: 10px 20px; text-decoration: none; border-radius: 5px; transition: background-color 0.3s; }
-        .cta-button:hover { background-color: #feb47b; }
-        .modal { display: none; position: fixed; z-index: 1; left: 0; top: 0; width: 100%; height: 100%; overflow: auto; background-color: rgba(0, 0, 0, 0.5); }
-        .modal-content { background-color: #fff; margin: 15% auto; padding: 20px; border: 1px solid #888; width: 80%; max-width: 500px; border-radius: 10px; color: #000; }
-        .close { color: #aaa; float: right; font-size: 28px; font-weight: bold; }
-        .close:hover, .close:focus { color: #000; text-decoration: none; cursor: pointer; }
-        footer { background: #232f3e; color: #fff; text-align: center; padding: 20px 0; border-top: 2px solid #0f171e; }
-        .footer-links a { color: #bbb; margin: 0 10px; text-decoration: none; transition: color 0.3s; }
-        .footer-links a:hover { color: #fff; }
+        body {
+            margin: 0;
+            font-family: 'Roboto', sans-serif;
+            background-color: #0f171e;
+            color: #fff;
+        }
+
+        header {
+            background: #0f171e;
+            padding: 20px;
+            text-align: center;
+            border-bottom: 2px solid #232f3e;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            background: #232f3e;
+            padding: 10px 0;
+        }
+
+        nav a {
+            color: #fff;
+            margin: 0 15px;
+            text-decoration: none;
+            padding: 8px 16px;
+            transition: background 0.3s, border-radius 0.3s;
+        }
+
+        nav a:hover {
+            background: #3a4553;
+            border-radius: 4px;
+        }
+
+        .hero {
+            position: relative;
+            height: 500px;
+            overflow: hidden;
+        }
+
+        #heroVideo {
+            width: 100%;
+            height: auto;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: -1;
+        }
+
+        .hero-text {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            color: #fff;
+            background: rgba(0, 0, 0, 0.5);
+            padding: 20px;
+            border-radius: 10px;
+            animation: fadeIn 2s;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+        .content {
+            padding: 20px;
+            max-width: 1200px;
+            margin: 20px auto;
+            text-align: center;
+        }
+
+        .content h2 {
+            color: #fff;
+        }
+
+        .features {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            padding: 40px 20px;
+            background: #0f171e;
+        }
+
+        .feature {
+            width: 30%;
+            margin: 10px;
+            padding: 20px;
+            background: #232f3e;
+            border-radius: 10px;
+            text-align: center;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .feature:hover {
+            transform: scale(1.05);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        .feature i {
+            font-size: 2em;
+            margin-bottom: 10px;
+        }
+
+        .cta-button {
+            background-color: #ff7e5f;
+            color: #fff;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        .cta-button:hover {
+            background-color: #feb47b;
+        }
+
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+
+        .modal-content {
+            background-color: #fff;
+            margin: 15% auto;
+            padding: 20px;
+            border: 1px solid #888;
+            width: 80%;
+            max-width: 500px;
+            border-radius: 10px;
+            color: #000;
+        }
+
+        .close {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .close:hover,
+        .close:focus {
+            color: #000;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        footer {
+            background: #232f3e;
+            color: #fff;
+            text-align: center;
+            padding: 20px 0;
+            border-top: 2px solid #0f171e;
+        }
+
+        .footer-links a {
+            color: #bbb;
+            margin: 0 10px;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .footer-links a:hover {
+            color: #fff;
+        }
     </style>
 </head>
+
 <body>
     <header>
         <h1>Welcome to Our Video Streaming Service</h1>
@@ -102,4 +260,5 @@
         }
     </script>
 </body>
+
 </html>
